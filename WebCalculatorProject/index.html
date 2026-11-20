@@ -1,0 +1,320 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Utility</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Loads JavaScript after the HTML is parsed -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2 class="logo">Student Utility</h2>
+
+        <nav>
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#conversion" class="nav-link">Conversion</a>
+            <a href="#tax" class="nav-link">Income Tax</a>
+            <a href="#looping" class="nav-link">Looping</a>
+            <a href="#payroll" class="nav-link">Payroll</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>Web Page Project</p>
+        </div>
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- HOME -->
+        <section id="home" class="welcome-card">
+            <p class="welcome-label">WELCOME</p>
+
+            <h1>Student Utility</h1>
+
+            <p class="welcome-description">
+                A simple workspace for conversions, income tax,
+                looping calculations, and payroll computation.
+            </p>
+        </section>
+
+
+        <!-- CONVERSION -->
+        <section id="conversion" class="card">
+
+            <h2>Conversion Calculator</h2>
+
+            <p class="section-description">
+                Convert temperature, distance, and weight.
+            </p>
+
+            <div class="calculator">
+
+                <label for="conversionType">Conversion Type:</label>
+
+                <select id="conversionType">
+                    <option value="temperature">Temperature</option>
+                    <option value="distance">Distance</option>
+                    <option value="weight">Weight</option>
+                </select>
+
+
+                <label for="conversionValue">Enter Value:</label>
+
+                <input
+                    type="number"
+                    id="conversionValue"
+                    placeholder="Enter a value"
+                    step="any"
+                >
+
+
+                <label for="conversionDirection">Convert:</label>
+
+                <select id="conversionDirection"></select>
+
+
+                <button type="button" id="convertButton">
+                    Convert
+                </button>
+
+
+                <div id="conversionResult" class="result">
+                    Your conversion result will appear here.
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- INCOME TAX -->
+        <section id="tax" class="card">
+
+            <h2>Income Tax Calculator</h2>
+
+            <p class="section-description">
+                Calculate estimated annual income tax.
+            </p>
+
+            <div class="calculator">
+
+                <label for="annualIncome">
+                    Annual Taxable Income (₱):
+                </label>
+
+                <input
+                    type="number"
+                    id="annualIncome"
+                    placeholder="Enter annual income"
+                    step="any"
+                >
+
+                <button type="button" id="taxButton">
+                    Calculate Tax
+                </button>
+
+                <div id="taxResult" class="result">
+                    Your tax calculation will appear here.
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- LOOPING -->
+        <section id="looping" class="card">
+
+            <h2>Looping Calculations</h2>
+
+            <p class="section-description">
+                Perform calculations using while, do-while, and for loops.
+            </p>
+
+
+            <!-- FACTORIAL -->
+            <div class="loop-calculator">
+
+                <h3>Factorial Calculator</h3>
+
+                <p>Calculate the factorial using a while loop.</p>
+
+                <label for="factorialInput">Enter a number:</label>
+
+                <input
+                    type="number"
+                    id="factorialInput"
+                    placeholder="Enter a whole number"
+                >
+
+                <button type="button" id="factorialButton">
+                    Calculate Factorial
+                </button>
+
+                <div id="factorialResult" class="result">
+                    Factorial result will appear here.
+                </div>
+
+            </div>
+
+
+            <!-- SUMMATION -->
+            <div class="loop-calculator">
+
+                <h3>Summation Calculator</h3>
+
+                <p>Add numbers from 1 up to your chosen number using a do-while loop.</p>
+
+                <label for="sumInput">Enter a number:</label>
+
+                <input
+                    type="number"
+                    id="sumInput"
+                    placeholder="Enter a whole number"
+                >
+
+                <button type="button" id="sumButton">
+                    Calculate Sum
+                </button>
+
+                <div id="sumResult" class="result">
+                    Summation result will appear here.
+                </div>
+
+            </div>
+
+
+            <!-- AVERAGE -->
+            <div class="loop-calculator">
+
+                <h3>Average Calculator</h3>
+
+                <p>Calculate the average using a for loop.</p>
+
+                <label for="averageInput">
+                    Enter numbers separated by commas:
+                </label>
+
+                <input
+                    type="text"
+                    id="averageInput"
+                    placeholder="Example: 10, 20, 30"
+                >
+
+                <button type="button" id="averageButton">
+                    Calculate Average
+                </button>
+
+                <div id="averageResult" class="result">
+                    Average result will appear here.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PAYROLL -->
+        <section id="payroll" class="card">
+
+            <h2>Payroll Calculator</h2>
+
+            <p class="section-description">
+                Calculate employee salary, overtime pay, deductions, and net salary.
+            </p>
+
+            <div class="calculator">
+
+                <label for="employeeName">Employee Name:</label>
+
+                <input
+                    type="text"
+                    id="employeeName"
+                    placeholder="Enter employee name"
+                >
+
+
+                <label for="dailyRate">Daily Rate (₱):</label>
+
+                <input
+                    type="number"
+                    id="dailyRate"
+                    placeholder="Enter daily rate"
+                    step="any"
+                >
+
+
+                <label for="daysWorked">Days Worked:</label>
+
+                <input
+                    type="number"
+                    id="daysWorked"
+                    placeholder="Enter days worked"
+                >
+
+
+                <label for="overtimeHours">Overtime Hours:</label>
+
+                <input
+                    type="number"
+                    id="overtimeHours"
+                    placeholder="Enter overtime hours"
+                    step="any"
+                >
+
+
+                <label for="overtimeRate">Overtime Rate per Hour (₱):</label>
+
+                <input
+                    type="number"
+                    id="overtimeRate"
+                    placeholder="Enter overtime rate"
+                    step="any"
+                >
+
+
+                <label for="deductions">Total Deductions (₱):</label>
+
+                <input
+                    type="number"
+                    id="deductions"
+                    placeholder="Enter deductions"
+                    step="any"
+                >
+
+
+                <button type="button" id="payrollButton">
+                    Calculate Payroll
+                </button>
+
+
+                <div id="payrollResult" class="result">
+                    Your payroll calculation will appear here.
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+            <p>Student Utility | Web Page Project</p>
+        </footer>
+
+    </main>
+
+</div>
+
+</body>
+</html>
+```
